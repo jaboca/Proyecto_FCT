@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modificar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre de usuario</ion-label>
+    <ion-input type="Text" [(ngModel)]="glo.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Contraseña:</ion-label>
+    <ion-input type="Text" [(ngModel)]="glo.Contra"></ion-input>
+  </ion-item>
+  <div>
+    <ion-button color="success" (click)="ModificarUsu()"  routerDirection = "root">Siguiente</ion-button>
+    <ion-button color="success" routerLink = "/home" routerDirection = "root">Salir</ion-button>
+  </div>
+</ion-content>

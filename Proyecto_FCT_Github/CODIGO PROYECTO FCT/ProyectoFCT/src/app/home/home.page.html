@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Lista de Administradores
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+
+  <div class="row header">
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+    <div class="col"></div>
+  </div>
+
+  <ion-row style="border-bottom: groove;">
+    <ion-col col-4>
+    <ion-label >Id</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >Nombre</ion-label>
+  </ion-col>
+    <ion-col col-4>
+    <ion-label >Contrasenya</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >Eliminar</ion-label>
+  </ion-col>
+  <ion-col col-4>
+    <ion-label >Modificar</ion-label>
+  </ion-col>  
+</ion-row>
+
+  <div class="post" *ngFor="let usuario of arrayPosts">
+
+    <div class="row" ng-repeat="data in ctrl.data">
+
+
+      <ion-row >
+        <ion-col col-4>
+        <ion-label >{{usuario.IdAdmin}}</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label >{{usuario.Nombre}}</ion-label>
+      </ion-col>
+        <ion-col col-4>
+        <ion-label >{{usuario.Contrasenya}}</ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label ><ion-button color="success" (click)="EliminarUsuario(usuario.IdAdmin)">Eliminar </ion-button></ion-label>
+      </ion-col>
+      <ion-col col-4>
+        <ion-label ><ion-button color="success" (click)="ModificarUsuario(usuario.IdAdmin,usuario.Nombre,usuario.Contrasenya)">Modificar </ion-button></ion-label>
+      </ion-col>
+    </ion-row>
+
+    </div>
+
+
+  </div>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar class="new-background-color"> 
+    <ion-title>Responde esta pregunta {{this.glo.usuario.Nombre}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding >
+  <ion-card *ngIf="this.glo.nivelactual" >
+    <ion-card-header>
+      <ion-card-title>
+        Nivel: {{this.glo.nivelactual.IdNivel}}
+      </ion-card-title>
+      <ion-card-subtitle>
+        Titulo: {{this.glo.nivelactual.Titulo}}
+      </ion-card-subtitle>
+      <ion-card-content>
+        Pregunta: {{this.glo.nivelactual.Pregunta}}
+      </ion-card-content>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Respuesta:</ion-label>
+          <ion-input type="Text" [(ngModel)]="glo.resp"></ion-input>
+        </ion-item>
+      </ion-card-content>
+      <ion-card-content>
+        <ion-button color="success" (click)="EnviaRespuesta()">Enviar respuesta </ion-button>
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

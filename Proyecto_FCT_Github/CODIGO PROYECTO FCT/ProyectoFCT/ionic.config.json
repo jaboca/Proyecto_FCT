@@ -1,0 +1,7 @@
+{
+  "name": "ProyectoFCT",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

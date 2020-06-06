@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>nuevo_usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre de usuario</ion-label>
+    <ion-input type="Text" [(ngModel)]="glo.nombre"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="stacked">Contraseña:</ion-label>
+    <ion-input type="Text" [(ngModel)]="glo.Contra"></ion-input>
+  </ion-item>
+  <div>
+    <ion-button color="success"  (click)="creausu()">Siguiente</ion-button>
+  </div>
+</ion-content>

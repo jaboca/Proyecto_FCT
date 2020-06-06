@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>!Fin del juego¡</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngIf="this.Glo.usuario">
+    <ion-card-header>Estadisticas del jugador: 
+      <ion-card-title>
+        Nombre del jugador: {{this.Glo.usuario.Nombre}}
+      </ion-card-title>
+      <ion-card-subtitle>
+        Puntuación máxima: {{this.Glo.usuario.Puntuacion}}
+      </ion-card-subtitle>
+      <ion-card-subtitle color = "red" *ngIf = "this.Glo.usuario.Puntuacion == 2411 " >
+        !Has alcanzado la máxima puntuación¡
+      </ion-card-subtitle>
+      <ion-card-subtitle>
+        Nivel: {{this.Glo.usuario.IdNivel}}
+      </ion-card-subtitle>
+      <ion-button color="success" routerLink = "/registro" >Salir de la aplicación</ion-button>
+    </ion-card-header>
+  </ion-card>
+</ion-content>
+
+
+

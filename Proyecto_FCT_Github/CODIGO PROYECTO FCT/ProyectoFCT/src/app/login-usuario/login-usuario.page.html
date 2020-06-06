@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login_usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre de usuario</ion-label>
+    <ion-input type="Text" [(ngModel)]="glo.nombre"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="stacked">Contraseña:</ion-label>
+    <ion-input type="Text" [(ngModel)]="glo.Contra"></ion-input>
+  </ion-item>
+  <div>
+    <ion-button color="success" (click)="compruebausu()" routerDirection="root">Entrar</ion-button>
+    <ion-button color="success"  routerLink = "/nuevo-usuario">Darse de alta</ion-button>
+  </div>
+</ion-content>

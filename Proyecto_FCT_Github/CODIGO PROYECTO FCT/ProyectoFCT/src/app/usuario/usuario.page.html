@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngIf="this.Glo.usuario">
+    <ion-card-header>
+      <ion-card-title>
+        Nombre: {{this.Glo.usuario.Nombre}}
+      </ion-card-title>
+      <ion-card-subtitle>
+        Puntuación: {{this.Glo.usuario.Puntuacion}}
+      </ion-card-subtitle>
+      <ion-card-subtitle>
+        Nivel: {{this.Glo.usuario.IdNivel}}
+      </ion-card-subtitle>
+      <ion-button color="success" routerLink = "/niveles">Jugar</ion-button>
+      <ion-button color="success" routerLink = "/registro" >Salir</ion-button>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre de administrador</ion-label>
+    <ion-input type="Text" [(ngModel)]="nombreadmi"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label position="stacked">Contraseña:</ion-label>
+    <ion-input type="Text" [(ngModel)]="Contra"></ion-input>
+  </ion-item>
+  <div>
+    <ion-button color="success" (click)="compruebalogin()" routerLink = "/administracion" routerDirection = "root">Siguiente</ion-button>
+    <ion-button color="success" routerLink = "/login-usuario" routerDirection = "root">¿Eres Usuario?</ion-button>
+  </div>
+
+</ion-content>

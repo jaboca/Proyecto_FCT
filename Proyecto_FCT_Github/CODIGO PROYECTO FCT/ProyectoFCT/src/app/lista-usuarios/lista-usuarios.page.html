@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>lista_usuarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="post" *ngFor="let user of arrayPosts2">
+    <h2>Nombre de usuario: {{user.Nombre}}</h2>
+    <p>Puntuacion: {{user.Puntuacion}}</p>
+    <ion-col col-4>
+      <ion-label ><ion-button color="success" (click)="EliminarUsuario(user.IdUsuario)">Eliminar </ion-button></ion-label>
+    </ion-col>
+    <ion-col col-4>
+      <ion-label ><ion-button color="success" (click)="ModificarUsuario(user.IdUsuario,user.IdNivel,user.Puntuacion)">Modificar </ion-button></ion-label>
+    </ion-col>
+  </div>
+  
+</ion-content>

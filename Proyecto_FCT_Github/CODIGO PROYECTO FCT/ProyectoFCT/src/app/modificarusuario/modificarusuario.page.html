@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modificarusuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">{{this.glo.usuario.Nombre}}</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Puntuacion:</ion-label>
+    <ion-input type="number" [(ngModel)]="this.glo.usuario.Puntuacion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Nivel:</ion-label>
+    <ion-input type="number" [(ngModel)]="this.glo.usuario.IdNivel"></ion-input>
+  </ion-item>
+  <div>
+    <ion-button color="success" (click)="ModificarUsuario()"  routerDirection = "root">Siguiente</ion-button>
+    <ion-button color="success" routerLink = "/home" routerDirection = "root">Salir</ion-button>
+  </div>
+</ion-content>
